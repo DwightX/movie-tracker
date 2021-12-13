@@ -27,7 +27,7 @@ function ActionMovies() {
       <h1>Populr Movies</h1>
         <div className="movie-posters">
           {data.map((movie) => (
-              <img className="movie-poster" src={getImage(movie.genres[1].name)} />
+              <h1>{movie.genres[1].name}</h1>
           ))}
         </div>
     </div>
