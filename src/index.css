@@ -1,3 +1,23 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.movie-posters{
+    display: flex;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    padding: 10px;
+}
+.movie-poster{
+object-fit: contain;
+width: 100%;
+max-height: 250px;
+margin-right: 10px;
+transition: transform 450ms;
+}
+.movie-poster:hover{
+transform: scale(1.09);
+}
+.wrapper{
+    padding: 50px;
+}

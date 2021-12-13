@@ -4,11 +4,12 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
+
 const api_key = "8960c0881dc3cac8c7615abbfbb25548";
 const BASE_URL = "https://api.themoviedb.org/3";
 const getImage = (path) => `https://image.tmdb.org/t/p/w300/${path}`;
 
-function MovieList() {
+function UpcomingMovies() {
   const [data, setData] = useState([]);
 
   const api = axios.create({ baseURL: BASE_URL });
@@ -22,19 +23,15 @@ function MovieList() {
   }, []);
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <div className="grid">
+    <div className="wrapper">
+      <h1>Populr Movies</h1>
+        <div className="movie-posters">
           {data.map((movie) => (
-            <div className="item">
-              <img src={getImage(movie.poster_path)} />
-              <p>{movie.original_title}</p>
-            </div>
+              <img className="movie-poster" src={getImage(movie.poster_path)} />
           ))}
         </div>
-      </header>
     </div>
   );
 }
 
-export default MovieList;
+export default UpcomingMovies;

@@ -1,11 +1,15 @@
 import './index.css';
-import MoviesList from './components/MoviesList';
-
+import PopularMovies from './components/PopularMovies';
+import UpcomingMovies from './components/UpcomingMovies';
+import ActionMovies
+ from './components/ActionMovies';
 function App() {
 
   return (
     <div className="App">
-    <MoviesList />
+    <PopularMovies />
+    <UpcomingMovies />
+    <ActionMovies />
     </div>
   );
 }
