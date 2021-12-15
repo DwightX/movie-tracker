@@ -1,9 +1,5 @@
 const API_KEY = "8960c0881dc3cac8c7615abbfbb25548"
 
-const randomId = () => {
-    Math.floor(Math.random() * 7001);
-}
-
 const request = {
     fetchTrending:`/trending/all/week?api_key=${API_KEY}`,
     fetchNetflixOriginals:`/discover/tv?api_key=${API_KEY}&with_networks=213`,

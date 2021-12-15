@@ -5,6 +5,10 @@
   color: white;
   margin-left: 20px;
 }
+.genre_title{
+  color: white;
+  font-weight: 500;
+}
 .movie-posters {
   display: flex;
   overflow-y: hidden;
