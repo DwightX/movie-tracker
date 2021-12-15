@@ -1,11 +1,14 @@
 import './index.css';
+import './App.css'
 import Row from './components/Row';
 import request from './request';
+import Banner from './components/Banner';
 
 function App() {
 
   return (
     <div className="App">
+      <Banner fetchUrl={request.fetchBannerMovie}/>
       <Row title="Trending"  isLargeRow={true} fetchUrl={request.fetchTrending}></Row>
       <Row title="Netflix Originals" fetchUrl={request.fetchNetflixOriginals}></Row>
       <Row title="Romantic" fetchUrl={request.fetchRomanticMovies}></Row>
