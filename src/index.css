@@ -3,10 +3,13 @@
 @tailwind utilities;
 
 .movie-posters{
-    display: flex;
-    overflow-y: hidden;
-    overflow-x: scroll;
-    padding: 10px;
+display: flex;
+overflow-y: hidden;
+overflow-x: scroll;
+padding: 10px;
+}
+.movie-posters::-webkit-scrollbar{
+    display: none;
 }
 .movie-poster{
 object-fit: contain;
@@ -19,5 +22,5 @@ transition: transform 450ms;
 transform: scale(1.09);
 }
 .wrapper{
-    padding: 50px;
+    padding: 0 20px;
 }

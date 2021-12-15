@@ -1,15 +1,18 @@
 import './index.css';
-import PopularMovies from './components/PopularMovies';
-import UpcomingMovies from './components/UpcomingMovies';
-import ActionMovies
- from './components/ActionMovies';
+import Row from './components/Row';
+import request from './request';
+
 function App() {
 
   return (
     <div className="App">
-    <PopularMovies />
-    <UpcomingMovies />
-    <ActionMovies />
+      <Row title="Trending"  isLargeRow={true} fetchUrl={request.fetchTrending}></Row>
+      <Row title="Netflix Originals" fetchUrl={request.fetchNetflixOriginals}></Row>
+      <Row title="Romantic" fetchUrl={request.fetchRomanticMovies}></Row>
+      <Row title="Action" fetchUrl={request.fetchActionMovies}></Row>
+      <Row title="Comedy" fetchUrl={request.fetchComedyMovies}></Row>
+      <Row title="Thriller" fetchUrl={request.fetchThrillerMovies}></Row>
+      <Row title="Romantic" fetchUrl={request.fetchRomanticMovies}></Row>
     </div>
   );
 }
